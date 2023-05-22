@@ -54,6 +54,8 @@ def sign_up():
 
       user = User.query.filter_by(email=email).first() 
 
+   
+
       if user:
          flash("Email already taken. Please try again", category="error")
       elif len(email) < 4: #type: ignore
